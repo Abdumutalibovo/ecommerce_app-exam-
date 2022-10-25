@@ -5,7 +5,7 @@ class ProductModel {
   String series;
   int price;
   String image;
-  String? info;
+  String info;
 
   ProductModel({
     required this.name,
@@ -16,8 +16,8 @@ class ProductModel {
   });
 
   static final products=[
-    ProductModel(name: "Apple Watch", series: "Series 6 . Red", price: 359, image: myImages.watch_image, info: '2020 Apple iPad Air 10.9'),
-    ProductModel(name: "Samsung", series: "Active 6 . Black", price: 120, image: myImages.watch_image2, info: '2020 Apple iPad Air 10.9'),
+    ProductModel(name: "Apple Watch", series: "Series 6 . Red", price: 359, image: myImages.watch_image, info: '2022 Apple Smart Watch 5.1'),
+    ProductModel(name: "Samsung", series: "Active 6 . Black", price: 120, image: myImages.watch_image2, info: '2021 electronic clock 12.3'),
     ProductModel(name: "iPad", series: "Active 10.9 . Black", price: 579, image: myImages.iphat_image, info: '2020 Apple iPad Air 10.9'),
   ];
 }

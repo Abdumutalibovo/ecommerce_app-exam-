@@ -1,4 +1,5 @@
 import 'package:ecommerce/screens/login_page.dart';
+import 'package:ecommerce/utils/app_routes.dart';
 import 'package:ecommerce/utils/colors.dart';
 import 'package:ecommerce/utils/images.dart';
 import 'package:ecommerce/utils/style.dart';
@@ -27,7 +28,7 @@ class SplashPage extends StatelessWidget {
               Center(
                 child: InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (_)=>SignInPage()));
+                    Navigator.pushNamed(context, RouteName.sign_in);
                   },
                   child: Container(
                     width: 314,

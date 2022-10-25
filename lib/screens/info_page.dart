@@ -8,8 +8,12 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class InfoPage extends StatefulWidget {
-  ProductModel? productModel;
-  InfoPage({super.key, required this.productModel});
+  String? image;
+  String? name;
+  String? series;
+  int? price;
+  String? info;
+  InfoPage({super.key, required this.image, required this.name, required this.series, required this.price, required this.info});
 
   @override
   State<InfoPage> createState() => _InfoPageState();
@@ -40,9 +44,8 @@ class _InfoPageState extends State<InfoPage> {
             Container(
               width: 230,
               height: 230,
-              child: Image.asset(widget.productModel!.image,fit: BoxFit.cover,)),
+              child: Image.asset(widget.image??"",fit: BoxFit.cover,)),
               SizedBox(height: 40,),
-              // Text("2020 Apple iPad Air 10.9", style: Mystyle.RelawayMedium500.copyWith(fontSize: 28),)
                Expanded(
                  child: Container(
                   width: double.infinity,
@@ -60,7 +63,7 @@ class _InfoPageState extends State<InfoPage> {
                       SizedBox(height: 10,),
                           Padding(
                             padding: const EdgeInsets.only(left: 50,),
-                            child: Text('2020 Apple iPad Air 10.9"', style: Mystyle.RelawayMedium500.copyWith(fontSize: 28),),
+                            child: Text(widget.info??"", style: Mystyle.RelawayMedium500.copyWith(fontSize: 28),),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 46, top: 8),
@@ -108,7 +111,7 @@ class _InfoPageState extends State<InfoPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("Total", style: Mystyle.RelawayMedium500.copyWith(fontSize: 17),),
-                              Text('\$${widget.productModel?.price}'"", style: Mystyle.RalewayBold700.copyWith(fontSize: 22,color: myColors.C_5956E9),),
+                              Text('\$${widget.price}'"", style: Mystyle.RalewayBold700.copyWith(fontSize: 22,color: myColors.C_5956E9),),
                             ],
                           ),
                           ),

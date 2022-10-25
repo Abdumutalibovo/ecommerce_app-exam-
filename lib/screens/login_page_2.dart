@@ -1,5 +1,6 @@
 import 'package:ecommerce/screens/login_page.dart';
 import 'package:ecommerce/screens/main_page.dart';
+import 'package:ecommerce/utils/app_routes.dart';
 import 'package:ecommerce/utils/colors.dart';
 import 'package:ecommerce/utils/images.dart';
 import 'package:ecommerce/utils/style.dart';
@@ -233,7 +234,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           InkWell(
                             onTap: () {
                               if(_formkey.currentState!.validate()){
-                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const MainPage()));
+                                Navigator.pushNamed(context, RouteName.main);
                           }
                             },
                             child: Container(
@@ -259,10 +260,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             padding: const EdgeInsets.only(right: 50),
                             child: InkWell(
                                 onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (_) => SignInPage()));
+                                  Navigator.pushNamed(context,RouteName.sign_in);
                                 },
                                 child: Text(
                                   "Sign In",

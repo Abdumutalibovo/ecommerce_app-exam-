@@ -1,5 +1,6 @@
 import 'package:ecommerce/models/product_model.dart';
 import 'package:ecommerce/screens/info_page.dart';
+import 'package:ecommerce/utils/app_routes.dart';
 import 'package:ecommerce/utils/colors.dart';
 import 'package:ecommerce/utils/images.dart';
 import 'package:ecommerce/utils/style.dart';
@@ -35,8 +36,13 @@ class WearablePage extends StatelessWidget {
                           children: [
                             InkWell(
                               onTap: () {
-                                Navigator.push(context,
-                                    MaterialPageRoute(builder: (_) => InfoPage(productModel: ProductModel.products[index])));
+                                Navigator.pushNamed(context, RouteName.info,arguments: {
+                                  "image": ProductModel.products[index].image,
+                                  "name": ProductModel.products[index].name,
+                                  "series": ProductModel.products[index].series,
+                                  "price": ProductModel.products[index].price,
+                                  "info": ProductModel.products[index].info,
+                                });
                               },
                               child: Padding(
                                 padding: const EdgeInsets.only(top: 60),
