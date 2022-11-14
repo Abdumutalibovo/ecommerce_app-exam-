@@ -25,7 +25,6 @@ class WearablePage extends StatelessWidget {
             Expanded(
               child: Container(
                 child: ListView.builder(
-                  // shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
                     physics: BouncingScrollPhysics(),
                     itemCount: 3,
